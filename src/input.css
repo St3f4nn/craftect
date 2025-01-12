@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  ::-moz-selection {
+    @apply text-white bg-yellow-850;
+  }
+
+  ::selection {
+    @apply text-white bg-yellow-850;
+  }
+
+  a {
+    @apply inline-block;
+  }
+
+  img {
+    @apply w-full;
+  }
+
+  select {
+    @apply appearance-none bg-none;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-6 xl:px-12;
+  }
+}
+
+/* Custom CSS */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
