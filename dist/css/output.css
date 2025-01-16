@@ -798,6 +798,10 @@ header.active #nav {
   background-color: rgb(209 172 0 / var(--tw-bg-opacity));
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .\!px-5 {
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
