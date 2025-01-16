@@ -20,6 +20,12 @@ module.exports = {
         "playfair-display": "'Playfair Display', serif",
         outfit: "'Outfit', sans-serif",
       },
+      spacing: {
+        1.25: "0.3125rem",
+        1.75: "0.4375rem",
+        5.75: "1.4375rem",
+        7.75: "1.9375rem",
+      },
     },
   },
   plugins: [

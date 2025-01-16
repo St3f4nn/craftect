@@ -22,11 +22,51 @@
   select {
     @apply appearance-none bg-none;
   }
+
+  /* Toggle navigation */
+  header.active {
+    @apply bg-slate-950;
+  }
+
+  header.active #toggle-menu-button span:first-child,
+  header.active #toggle-menu-button span:last-child {
+    @apply absolute left-0 w-full;
+  }
+
+  header.active #toggle-menu-button span:first-child {
+    @apply top-1/2 -translate-y-1/2 rotate-45;
+  }
+
+  header.active #toggle-menu-button span:last-child {
+    @apply bottom-1/2 translate-y-1/2 -rotate-45;
+  }
+
+  header.active #toggle-menu-button span:not(:first-child):not(:last-child) {
+    @apply hidden;
+  }
+
+  header.active #nav {
+    @apply pb-4 md:pb-0 h-max overflow-visible;
+  }
 }
 
 @layer components {
   .container {
     @apply mx-auto px-6 xl:px-12;
+  }
+}
+
+@layer utilities {
+  .cta {
+    @apply font-light text-base border border-solid md:text-center capitalize py-1.75 px-7.75 transition-all duration-200 hover:text-white;
+  }
+
+  .cta-main {
+    @apply text-yellow-850 border-yellow-850 border-opacity-50 hover:bg-yellow-850 hover:border-opacity-100;
+  }
+
+  .cta-dark {
+    @apply text-slate-950 border-slate-950 hover:bg-slate-950;
   }
 }
 
