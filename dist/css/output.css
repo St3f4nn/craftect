@@ -506,14 +506,14 @@ header.active #toggle-menu-button span:not(:first-child):not(:last-child) {
 }
 
 header.active #nav {
-  height: -moz-max-content;
-  height: max-content;
+  height: auto;
   overflow: visible;
   padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   header.active #nav {
+    overflow: auto;
     padding-bottom: 0px;
   }
 }

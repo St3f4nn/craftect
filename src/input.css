@@ -46,7 +46,7 @@
   }
 
   header.active #nav {
-    @apply pb-4 md:pb-0 h-max overflow-visible;
+    @apply pb-4 md:pb-0 h-auto overflow-visible md:overflow-auto;
   }
 }
 
