@@ -6,6 +6,9 @@ module.exports = {
   content: ["./dist/**/*.html", "./dist/js/**/*.js"],
   theme: {
     extend: {
+      backgroundImage: {
+        "blue-building": "url('../assets/images/blue_building.jpg')",
+      },
       colors: {
         slate: {
           // Grey color

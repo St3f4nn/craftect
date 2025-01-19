@@ -23,6 +23,10 @@
     @apply appearance-none bg-none;
   }
 
+  section.bg-white {
+    @apply text-slate-950;
+  }
+
   /* Toggle navigation */
   header.active {
     @apply bg-slate-950;
@@ -46,7 +50,7 @@
   }
 
   header.active #nav {
-    @apply pb-4 md:pb-0 h-auto overflow-visible md:overflow-auto;
+    @apply pb-4 md:pb-0 h-max md:h-auto overflow-visible md:overflow-auto;
   }
 }
 
@@ -68,10 +72,26 @@
   .cta-dark {
     @apply text-slate-950 border-slate-950 hover:bg-slate-950;
   }
+
+  .section-heading {
+    @apply font-playfair-display font-normal text-3xl md:text-4xl capitalize before:content-[''] before:block before:w-28 before:h-px before:bg-yellow-850 before:opacity-75 before:mb-4;
+  }
+
+  .section-heading.text-center {
+    @apply before:mx-auto;
+  }
+
+  h1.section-heading {
+    @apply before:opacity-50;
+  }
 }
 
 /* Custom CSS */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+section:not([class*="bg-"]) {
+  color: #0c1618;
 }
