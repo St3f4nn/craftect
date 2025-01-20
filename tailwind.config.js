@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         "blue-building": "url('../assets/images/blue_building.jpg')",
+
+        "pencil-on-paper": "url('../assets/images/pencil_on_paper.jpg')",
+        "designer-working": "url('../assets/images/designer_working.jpg')",
       },
       colors: {
         slate: {

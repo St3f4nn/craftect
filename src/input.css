@@ -74,7 +74,7 @@
   }
 
   .section-heading {
-    @apply font-playfair-display font-normal text-3xl md:text-4xl capitalize before:content-[''] before:block before:w-28 before:h-px before:bg-yellow-850 before:opacity-75 before:mb-4;
+    @apply font-playfair-display font-normal text-3xl md:text-4xl capitalize before:content-[''] before:block before:max-w-28 before:h-px before:bg-yellow-850 before:opacity-75 before:mb-4;
   }
 
   .section-heading.text-center {
@@ -83,6 +83,14 @@
 
   h1.section-heading {
     @apply before:opacity-50;
+  }
+
+  .section-paragraph-box {
+    @apply flex flex-col gap-6;
+  }
+
+  .section-paragraph {
+    @apply font-light text-base xl:text-lg xl:leading-normal;
   }
 }
 
