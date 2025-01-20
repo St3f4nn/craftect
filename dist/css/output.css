@@ -485,6 +485,12 @@ header.active {
   background-color: rgb(12 22 24 / var(--tw-bg-opacity));
 }
 
+@media (min-width: 768px) {
+  header.active {
+    --tw-bg-opacity: 0;
+  }
+}
+
 header.active #toggle-menu-button span:first-child,
   header.active #toggle-menu-button span:last-child {
   position: absolute;
@@ -748,10 +754,6 @@ header.active #nav {
 
 .grid {
   display: grid;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-0 {
@@ -1142,12 +1144,6 @@ section:not([class*="bg-"]) {
   content: var(--tw-content);
 }
 
-.after\:mx-auto::after {
-  content: var(--tw-content);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .after\:block::after {
   content: var(--tw-content);
   display: block;
@@ -1306,6 +1302,12 @@ section:not([class*="bg-"]) {
   }
 
   .md\:text-center.section-heading::before {
+    content: var(--tw-content);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .md\:after\:mx-auto::after {
     content: var(--tw-content);
     margin-left: auto;
     margin-right: auto;

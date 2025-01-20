@@ -29,7 +29,7 @@
 
   /* Toggle navigation */
   header.active {
-    @apply bg-slate-950;
+    @apply bg-slate-950 md:bg-opacity-0;
   }
 
   header.active #toggle-menu-button span:first-child,
