@@ -731,6 +731,10 @@ header.active #nav {
   grid-row-start: 3;
 }
 
+.row-start-1 {
+  grid-row-start: 1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -760,6 +764,10 @@ header.active #nav {
   margin-top: 2rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -784,6 +792,10 @@ header.active #nav {
   height: 1px;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -805,12 +817,20 @@ header.active #nav {
   width: max-content;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .max-w-24 {
   max-width: 6rem;
 }
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .basis-16 {
@@ -873,6 +893,10 @@ header.active #nav {
   gap: 2rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -896,6 +920,10 @@ header.active #nav {
   background-image: url('../assets/images/blue_building.jpg');
 }
 
+.bg-construction-worker {
+  background-image: url('../assets/images/construction_worker.jpg');
+}
+
 .bg-designer-working {
   background-image: url('../assets/images/designer_working.jpg');
 }
@@ -906,6 +934,10 @@ header.active #nav {
 
 .bg-pencil-on-paper {
   background-image: url('../assets/images/pencil_on_paper.jpg');
+}
+
+.bg-skyscraper {
+  background-image: url('../assets/images/skyscraper.jpg');
 }
 
 .bg-cover {
@@ -1017,6 +1049,11 @@ header.active #nav {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-light {
   font-weight: 300;
 }
@@ -1049,6 +1086,10 @@ header.active #nav {
   line-height: 1.5;
 }
 
+.leading-6 {
+  line-height: 1.5rem;
+}
+
 .tracking-widest {
   letter-spacing: 0.1em;
 }
@@ -1056,6 +1097,11 @@ header.active #nav {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-250 {
+  --tw-text-opacity: 1;
+  color: rgb(217 217 214 / var(--tw-text-opacity));
 }
 
 .opacity-20 {
@@ -1324,6 +1370,10 @@ section:not([class*="bg-"]) {
     top: auto;
   }
 
+  .md\:row-auto {
+    grid-row: auto;
+  }
+
   .md\:mt-32 {
     margin-top: 8rem;
   }
@@ -1340,8 +1390,16 @@ section:not([class*="bg-"]) {
     height: auto;
   }
 
+  .md\:h-14 {
+    height: 3.5rem;
+  }
+
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-14 {
+    width: 3.5rem;
   }
 
   .md\:grid-cols-2 {
@@ -1350,6 +1408,10 @@ section:not([class*="bg-"]) {
 
   .md\:grid-cols-\[1fr_3fr\] {
     grid-template-columns: 1fr 3fr;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -1378,6 +1440,10 @@ section:not([class*="bg-"]) {
 
   .md\:gap-8 {
     gap: 2rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:overflow-auto {
@@ -1413,6 +1479,11 @@ section:not([class*="bg-"]) {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:\!leading-none {
@@ -1457,11 +1528,24 @@ section:not([class*="bg-"]) {
   .lg\:border-opacity-15 {
     --tw-border-opacity: 0.15;
   }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
   .xl\:mt-36 {
     margin-top: 9rem;
+  }
+
+  .xl\:h-20 {
+    height: 5rem;
+  }
+
+  .xl\:w-20 {
+    width: 5rem;
   }
 
   .xl\:gap-12 {
@@ -1470,6 +1554,10 @@ section:not([class*="bg-"]) {
 
   .xl\:gap-24 {
     gap: 6rem;
+  }
+
+  .xl\:gap-16 {
+    gap: 4rem;
   }
 
   .xl\:pb-16 {
@@ -1483,6 +1571,11 @@ section:not([class*="bg-"]) {
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .xl\:leading-tight {

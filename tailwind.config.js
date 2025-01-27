@@ -11,8 +11,15 @@ module.exports = {
 
         "pencil-on-paper": "url('../assets/images/pencil_on_paper.jpg')",
         "designer-working": "url('../assets/images/designer_working.jpg')",
+
+        skyscraper: "url('../assets/images/skyscraper.jpg')",
+        "construction-worker":
+          "url('../assets/images/construction_worker.jpg')",
       },
       colors: {
+        gray: {
+          250: "#d9d9d6",
+        },
         slate: {
           // Grey color
           950: "#0c1618",
