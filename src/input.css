@@ -52,6 +52,28 @@
   header.active #nav {
     @apply pb-4 md:pb-0 h-max md:h-auto overflow-visible md:overflow-auto;
   }
+
+  button.active-tab {
+    @apply after:w-full;
+  }
+
+  button.active-tab
+    svg
+    path:not(
+      :is([stroke], [stroke-linecap], [stroke-width], [stroke-linejoin])
+    ) {
+    @apply fill-yellow-850 opacity-100;
+  }
+
+  button.active-tab
+    svg
+    path:is([stroke], [stroke-linecap], [stroke-width], [stroke-linejoin]) {
+    @apply stroke-yellow-850 opacity-100;
+  }
+
+  .active-service {
+    @apply block md:grid md:grid-cols-2;
+  }
 }
 
 @layer components {

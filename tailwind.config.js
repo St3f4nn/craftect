@@ -15,6 +15,13 @@ module.exports = {
         skyscraper: "url('../assets/images/skyscraper.jpg')",
         "construction-worker":
           "url('../assets/images/construction_worker.jpg')",
+
+        architect: "url('../assets/images/architect.jpg')",
+        "silver-building": "url('../assets/images/silver_building.jpg')",
+        "glass-building": "url('../assets/images/glass_building.jpg')",
+        "modern-house": "url('../assets/images/modern_house.jpg')",
+        "living-room": "url('../assets/images/living_room.jpg')",
+        kitchen: "url('../assets/images/kitchen.jpg')",
       },
       colors: {
         gray: {
@@ -36,8 +43,10 @@ module.exports = {
       spacing: {
         1.25: "0.3125rem",
         1.75: "0.4375rem",
+        5.25: "1.3125rem",
         5.75: "1.4375rem",
         7.75: "1.9375rem",
+        18: "4.5rem",
       },
     },
   },
