@@ -1581,10 +1581,6 @@ section:not([class*="bg-"]) {
     grid-row: auto;
   }
 
-  .md\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .md\:mt-18 {
     margin-top: 4.5rem;
   }
@@ -1779,10 +1775,6 @@ section:not([class*="bg-"]) {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .xl\:mt-36 {
     margin-top: 9rem;
   }
