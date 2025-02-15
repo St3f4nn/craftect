@@ -552,6 +552,23 @@ button.active-tab
   opacity: 1;
 }
 
+.service {
+  margin-top: 2rem;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .service {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .service {
+    margin-top: 3rem;
+  }
+}
+
 .active-service {
   display: block;
 }
@@ -815,6 +832,10 @@ button.active-tab
 
 .grid {
   display: grid;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {

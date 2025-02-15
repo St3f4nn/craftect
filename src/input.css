@@ -71,6 +71,10 @@
     @apply stroke-yellow-850 opacity-100;
   }
 
+  .service {
+    @apply hidden mt-8 md:mt-10 xl:mt-12;
+  }
+
   .active-service {
     @apply block md:grid md:grid-cols-2;
   }
