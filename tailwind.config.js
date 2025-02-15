@@ -40,6 +40,9 @@ module.exports = {
         "playfair-display": "'Playfair Display', serif",
         outfit: "'Outfit', sans-serif",
       },
+      letterSpacing: {
+        "widest-2": "0.12em",
+      },
       spacing: {
         1.25: "0.3125rem",
         1.75: "0.4375rem",
