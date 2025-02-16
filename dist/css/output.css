@@ -580,6 +580,31 @@ button.active-tab
   }
 }
 
+section.slide-dot {
+  --tw-text-opacity: 1;
+  color: rgb(12 22 24 / var(--tw-text-opacity));
+}
+
+.slide-dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0.75;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.active-slide-dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 172 0 / var(--tw-bg-opacity));
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -752,8 +777,16 @@ button.active-tab
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .top-full {
@@ -832,10 +865,6 @@ button.active-tab
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -919,6 +948,14 @@ button.active-tab
   width: max-content;
 }
 
+.max-w-1 {
+  max-width: 0.25rem;
+}
+
+.max-w-1\.5xl {
+  max-width: 39rem;
+}
+
 .max-w-24 {
   max-width: 6rem;
 }
@@ -931,8 +968,21 @@ button.active-tab
   flex-shrink: 0;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .basis-16 {
   flex-basis: 4rem;
+}
+
+.basis-full {
+  flex-basis: 100%;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -1011,6 +1061,10 @@ button.active-tab
   overflow: hidden;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .bg-slate-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(12 22 24 / var(--tw-bg-opacity));
@@ -1074,6 +1128,10 @@ button.active-tab
   background-image: url('../assets/images/skyscraper.jpg');
 }
 
+.bg-mansion-on-lake {
+  background-image: url('../assets/images/mansion_on_lake.jpg');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1129,6 +1187,11 @@ button.active-tab
 .\!py-1\.25 {
   padding-top: 0.3125rem !important;
   padding-bottom: 0.3125rem !important;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-6 {
@@ -1208,6 +1271,11 @@ button.active-tab
   line-height: 1;
 }
 
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1228,9 +1296,8 @@ button.active-tab
   line-height: 1rem;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.font-extralight {
+  font-weight: 200;
 }
 
 .font-light {
@@ -1285,6 +1352,11 @@ button.active-tab
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-850 {
+  --tw-text-opacity: 1;
+  color: rgb(209 172 0 / var(--tw-text-opacity));
 }
 
 .opacity-20 {
@@ -1773,6 +1845,11 @@ section:not([class*="bg-"]) {
     line-height: 2.5rem;
   }
 
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1831,6 +1908,10 @@ section:not([class*="bg-"]) {
     margin-top: 9rem;
   }
 
+  .xl\:h-12 {
+    height: 3rem;
+  }
+
   .xl\:h-14 {
     height: 3.5rem;
   }
@@ -1839,12 +1920,24 @@ section:not([class*="bg-"]) {
     height: 5rem;
   }
 
+  .xl\:w-12 {
+    width: 3rem;
+  }
+
   .xl\:w-14 {
     width: 3.5rem;
   }
 
   .xl\:w-20 {
     width: 5rem;
+  }
+
+  .xl\:max-w-3 {
+    max-width: 0.75rem;
+  }
+
+  .xl\:max-w-3\.5xl {
+    max-width: 50rem;
   }
 
   .xl\:grid-cols-3 {

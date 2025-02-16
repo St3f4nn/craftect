@@ -22,6 +22,8 @@ module.exports = {
         "modern-house": "url('../assets/images/modern_house.jpg')",
         "living-room": "url('../assets/images/living_room.jpg')",
         kitchen: "url('../assets/images/kitchen.jpg')",
+
+        "mansion-on-lake": "url('../assets/images/mansion_on_lake.jpg')",
       },
       colors: {
         gray: {
@@ -42,6 +44,10 @@ module.exports = {
       },
       letterSpacing: {
         "widest-2": "0.12em",
+      },
+      maxWidth: {
+        "1.5xl": "39rem",
+        "3.5xl": "50rem",
       },
       spacing: {
         1.25: "0.3125rem",
