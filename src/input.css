@@ -80,7 +80,7 @@
   }
 
   .slide-dot {
-    @apply w-2 h-2 bg-white opacity-75 rounded-full inline-block transition-all duration-200;
+    @apply w-2 h-2 bg-white opacity-75 rounded-full inline-block transition-all duration-200 cursor-pointer focus:outline-none;
   }
 
   .active-slide-dot {
@@ -91,6 +91,30 @@
 @layer components {
   .container {
     @apply mx-auto px-6 xl:px-12;
+  }
+
+  .arr {
+    @apply w-6 h-6 xl:w-12 xl:h-12 cursor-pointer absolute top-1/2 -translate-y-1/2 z-20 focus:outline-none;
+  }
+
+  .arr svg path {
+    @apply stroke-yellow-850 opacity-75 transition-all duration-200;
+  }
+
+  .arr-left {
+    @apply left-0;
+  }
+
+  .arr-right {
+    @apply right-0;
+  }
+
+  .testimonial-gap {
+    @apply gap-12 xl:gap-24;
+  }
+
+  .testimonial {
+    @apply text-center flex-grow flex-shrink-0 basis-full;
   }
 }
 
