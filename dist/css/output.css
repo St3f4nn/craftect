@@ -979,6 +979,10 @@ section.slide-dot {
   height: 1px;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1110,6 +1114,10 @@ section.slide-dot {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .bg-slate-950 {
