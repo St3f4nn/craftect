@@ -19,6 +19,12 @@
     @apply w-full;
   }
 
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   select {
     @apply appearance-none bg-none;
   }
@@ -27,7 +33,6 @@
     @apply text-slate-950;
   }
 
-  /* Toggle navigation */
   header.active {
     @apply bg-slate-950 md:bg-opacity-0;
   }
@@ -85,6 +90,15 @@
 
   .active-slide-dot {
     @apply w-3 h-3 bg-yellow-850;
+  }
+
+  select[name="inquiries"]:hover + svg path,
+  select[name="inquiries"]:focus + svg path {
+    @apply stroke-yellow-850;
+  }
+
+  select[name="inquiries"]:focus + svg {
+    @apply rotate-180;
   }
 }
 

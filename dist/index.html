@@ -29,7 +29,7 @@
       Crafting Timeless Designs with Precision and Passion | Craftect
     </title>
   </head>
-  <body class="debug-screens bg-white text-white font-outfit">
+  <body class="bg-white text-white font-outfit">
     <!-- Header -->
     <header
       class="py-6 absolute top-0 left-0 w-full z-50 transition-all duration-200">
@@ -1257,16 +1257,22 @@
         </div>
       </section>
       <!-- Contact section -->
-      <section>
+      <section class="py-28 md:py-32 xl:py-36">
         <div class="container">
-          <h2>get <span>in</span> touch <span>with</span> us</h2>
-          <p>
-            We value every inquiry and are committed to providing personalized
-            solutions. Visit our office or complete the form below to get in
-            touch with our team.
-          </p>
+          <header class="max-w-1.5xl">
+            <h2 class="section-heading">
+              get <span class="lowercase">in</span> touch
+              <span class="lowercase">with</span> us
+            </h2>
+            <p class="section-paragraph mt-8">
+              We value every inquiry and are committed to providing personalized
+              solutions. Visit our office or complete the form below to get in
+              touch with our team.
+            </p>
+          </header>
           <!-- Contact container -->
-          <div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-20 xl:gap-24 mt-16 md:mt-18">
             <!-- Contact left -->
             <div>
               <iframe
@@ -1274,107 +1280,155 @@
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-72 md:h-80 xl:h-96"></iframe>
               <!-- Contact info -->
-              <ul>
-                <li>
-                  <span>Address:</span> 700 Atlantic Ave, Boston, MA 02111
+              <ul class="flex flex-col gap-2 mt-8">
+                <li class="font-normal text-base xl:text-lg xl:leading-normal">
+                  <span class="font-light opacity-75">Address:</span> 700
+                  Atlantic Ave, Boston, MA 02111
                 </li>
-                <li>
-                  <span>Email:</span>
-                  <a href="mailto:info@craftect.com">info@craftect.com</a>
+                <li class="font-normal text-base xl:text-lg xl:leading-normal">
+                  <span class="font-light opacity-75">Email:</span>
+                  <a
+                    href="mailto:info@craftect.com"
+                    class="hover:text-yellow-850 transition-all duration-200"
+                    >info@craftect.com</a
+                  >
                 </li>
-                <li>
-                  <span>Phone:</span>
-                  <a href="tel:+1 (617) 555-0123">+1 (617) 555-0123</a>
+                <li
+                  class="font-normal text-base xl:text-lg xl:leading-normal mt-4">
+                  <span class="font-light opacity-75">Phone:</span>
+                  <a
+                    href="tel:+1 (617) 555-0123"
+                    class="hover:text-yellow-850 transition-all duration-200"
+                    >+1 (617) 555-0123</a
+                  >
                 </li>
-                <li>
-                  <span>Fax:</span>
-                  <a href="tel:+1 (617) 555-4567">+1 (617) 555-4567</a>
+                <li class="font-normal text-base xl:text-lg xl:leading-normal">
+                  <span class="font-light opacity-75">Fax:</span>
+                  <a
+                    href="tel:+1 (617) 555-4567"
+                    class="hover:text-yellow-850 transition-all duration-200"
+                    >+1 (617) 555-4567</a
+                  >
                 </li>
-                <li>
-                  <span>Opening hours</span> Monday - Friday, 9:00 AM - 6:00 PM
+                <li
+                  class="font-normal text-base xl:text-lg xl:leading-normal mt-4">
+                  <span class="font-light opacity-75">Opening hours</span>
+                  Monday - Friday, 9:00 AM - 6:00 PM
                 </li>
               </ul>
             </div>
             <!-- Contact right -->
             <div>
-              <p><span>note:</span> Fields marked with * are required</p>
+              <p class="font-light text-base xl:text-lg xl:leading-normal">
+                <span class="uppercase">note:</span> Fields marked with * are
+                required
+              </p>
               <!-- Contact section form -->
-              <form autocomplete="on">
+              <form autocomplete="on" class="mt-12 xl:mt-14">
                 <!-- Fields -->
-                <div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 xl:gap-12">
                   <!-- Field: FIRST NAME -->
                   <input
                     type="text"
                     name="first-name"
                     placeholder="First name *"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850"
                     required />
                   <!-- Field: LAST NAME -->
                   <input
                     type="text"
                     name="last-name"
                     placeholder="Last name *"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850"
                     required />
                   <!-- Field: COMPANY NAME -->
                   <input
                     type="text"
                     name="company-name"
-                    placeholder="Company name" />
+                    placeholder="Company name"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850" />
                   <!-- Field: CITY  -->
-                  <input type="text" name="city" placeholder="City" />
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850" />
                   <!-- Field: E-MAIL -->
                   <input
                     type="email"
                     name="e-mail"
                     placeholder="E-mail *"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850"
                     required />
                   <!-- Field: PHONE NUMBER -->
                   <input
-                    type="tel"
+                    type="number"
                     name="phone-number"
-                    placeholder="Phone number" />
+                    placeholder="Phone number"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850" />
                   <!-- Field: INQUIRY SELECTION -->
-                  <div>
+                  <div class="relative">
+                    <select
+                      name="inquiries"
+                      class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850">
+                      <option disabled selected class="font-light">
+                        Select an inquiry
+                      </option>
+                      <option
+                        value="architectural-design-and-planning"
+                        class="font-light">
+                        Architectural Design & Planning
+                      </option>
+                      <option
+                        value="sustainable-building-solutions"
+                        class="font-light">
+                        Sustainable Building Solutions
+                      </option>
+                      <option
+                        value="interior-design-and-space-optimization"
+                        class="font-light">
+                        Interior Design & Space Optimization
+                      </option>
+                      <option value="other" class="font-light">Other</option>
+                    </select>
                     <svg
                       viewBox="0 0 16 16"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 opacity-75 absolute top-1/2 -translate-y-1/2 right-0 transition-all duration-200">
                       <path
                         d="M13 5.95996L8 10.96L3 5.95996"
                         stroke-opacity="0.75"
                         stroke-width="1.5"
                         stroke-linecap="round"
-                        stroke-linejoin="round" />
+                        stroke-linejoin="round"
+                        class="stroke-slate-950 transition-all duration-200" />
                     </svg>
-                    <select name="inquiries">
-                      <option disabled selected>Select an inquiry</option>
-                      <option value="architectural-design-and-planning">
-                        architectural design & planning
-                      </option>
-                      <option value="sustainable-building-solutions">
-                        sustainable building solutions
-                      </option>
-                      <option value="interior-design-and-space-optimization">
-                        interior design & space optimization
-                      </option>
-                      <option value="other">other</option>
-                    </select>
                   </div>
                   <!-- Field: SUBJECT -->
                   <input
                     type="text"
                     name="subject"
                     placeholder="Subject *"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850"
                     required />
                   <!-- Field: MESSAGE AREA -->
                   <textarea
                     name="message-area"
                     placeholder="Message *"
+                    class="block w-full outline-none font-light text-base border-b border-solid border-slate-950 border-opacity-75 placeholder:text-slate-950 placeholder:opacity-75 pb-1 transition-all duration-200 hover:border-yellow-850 focus:border-yellow-850 resize-none h-29.5 xl:h-32.5 col-span-full"
                     required></textarea>
                 </div>
                 <!-- Submit button -->
-                <button type="submit">send</button>
+                <button
+                  type="submit"
+                  class="cta cta-dark mt-8 md:mt-10 xl:mt-12">
+                  send
+                </button>
               </form>
             </div>
           </div>
