@@ -15,6 +15,21 @@ const testimonials = document.querySelectorAll(".testimonial");
 const arrs = document.querySelectorAll(".arr");
 const slideDots = document.querySelector("#slide-dots");
 
+const requiredFields = [
+  ...document.querySelectorAll("#contact-form [required]"),
+];
+const formSubmitBtn = document.querySelector(
+  "#contact-form button[type='submit']"
+);
+
+const notePopups = document.querySelector("#note-popups");
+
+const emptyFieldsNote = document.querySelector("#empty-fields-note");
+const incorrectEmailNote = document.querySelector("#incorrect-email-note");
+const submissionSuccessNote = document.querySelector(
+  "#submission-success-note"
+);
+
 // FUNCTIONS
 
 // Update the current year in the footer every new year
@@ -63,6 +78,21 @@ function startSliding(slideBtn, slideLeft, slideRight) {
       slideDotIndex === sliderCounter &&
         slideDot.classList.add("active-slide-dot");
     });
+}
+
+// Get the email field
+const emailField = requiredFields.filter(field => field.type === "email")[0];
+
+// Display note
+function displayNote(note) {
+  note.classList.remove("hidden");
+  note.classList.add("flex");
+}
+
+// Hide note
+function hideNote(note) {
+  note.classList.add("hidden");
+  note.classList.remove("flex");
 }
 
 // EVENTS
@@ -147,3 +177,65 @@ window.addEventListener("keyup", function (e) {
   (e.key === "ArrowLeft" || e.key === "ArrowRight") &&
     startSliding(e.key, "ArrowLeft", "ArrowRight");
 });
+
+// Form validation
+formSubmitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (requiredFields.some(field => !field.value)) {
+    hideNote(incorrectEmailNote);
+    hideNote(submissionSuccessNote);
+
+    displayNote(emptyFieldsNote);
+
+    requiredFields.forEach(function (field) {
+      if (!field.value) {
+        field.classList.add("empty-field");
+      } else {
+        field.classList.remove("empty-field");
+
+        if (
+          field.type === "email" &&
+          !field.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
+        ) {
+          field.classList.toggle("empty-field");
+
+          displayNote(incorrectEmailNote);
+        }
+      }
+    });
+  } else {
+    hideNote(emptyFieldsNote);
+    hideNote(submissionSuccessNote);
+
+    requiredFields.forEach(field => field.classList.remove("empty-field"));
+
+    if (
+      !emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
+    ) {
+      emailField.classList.toggle("empty-field");
+
+      displayNote(incorrectEmailNote);
+
+      return;
+    }
+
+    hideNote(incorrectEmailNote);
+
+    displayNote(submissionSuccessNote);
+
+    document.querySelector("#contact-form").reset();
+  }
+});
+
+notePopups.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const closeNoteBtn = e.target.closest(".close-note-btn");
+
+  if (closeNoteBtn) hideNote(closeNoteBtn.parentElement);
+});
+
+requiredFields.forEach(field =>
+  field.addEventListener("keyup", () => field.classList.remove("empty-field"))
+);

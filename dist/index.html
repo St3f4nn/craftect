@@ -1327,7 +1327,7 @@
                 required
               </p>
               <!-- Contact section form -->
-              <form autocomplete="on" class="mt-12 xl:mt-14">
+              <form autocomplete="on" class="mt-12 xl:mt-14" id="contact-form">
                 <!-- Fields -->
                 <div
                   class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 xl:gap-12">
@@ -1429,6 +1429,132 @@
                   class="cta cta-dark mt-8 md:mt-10 xl:mt-12">
                   send
                 </button>
+                <!-- Note popups -->
+                <div
+                  class="flex flex-col gap-4 mt-8 md:mt-10 xl:mt-12"
+                  id="note-popups">
+                  <!-- Empty fields warning -->
+                  <div
+                    class="hidden items-center gap-2 p-2 border-t border-solid border-red-600 bg-red-100 text-red-600"
+                    id="empty-fields-note">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 flex-shrink-0"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M256 80c-8.66 0-16.58 7.36-16 16l8 216a8 8 0 008 8h0a8 8 0 008-8l8-216c.58-8.64-7.34-16-16-16z"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32"
+                        class="stroke-red-600" />
+                      <circle
+                        cx="256"
+                        cy="416"
+                        r="16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32" />
+                    </svg>
+                    <span class="text-base"
+                      >Required fields are not filled in.</span
+                    >
+                    <button
+                      class="flex-shrink-0 ml-auto cursor-pointer close-note-btn">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5"
+                        viewBox="0 0 512 512">
+                        <path
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="32"
+                          class="stroke-red-600"
+                          d="M368 368L144 144M368 144L144 368" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Wrong e-mail format warning -->
+                  <div
+                    class="hidden items-center gap-2 p-2 border-t border-solid border-red-600 bg-red-100 text-red-600"
+                    id="incorrect-email-note">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 flex-shrink-0"
+                      viewBox="0 0 512 512">
+                      <path
+                        d="M256 80c-8.66 0-16.58 7.36-16 16l8 216a8 8 0 008 8h0a8 8 0 008-8l8-216c.58-8.64-7.34-16-16-16z"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32"
+                        class="stroke-red-600" />
+                      <circle
+                        cx="256"
+                        cy="416"
+                        r="16"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32" />
+                    </svg>
+                    <span class="text-base">E-mail is not correct.</span>
+                    <button
+                      class="flex-shrink-0 ml-auto cursor-pointer close-note-btn">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5"
+                        viewBox="0 0 512 512">
+                        <path
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="32"
+                          class="stroke-red-600"
+                          d="M368 368L144 144M368 144L144 368" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Form submission success note -->
+                  <div
+                    class="hidden items-center gap-2 p-2 border-t border-solid border-green-600 bg-green-100 text-green-600"
+                    id="submission-success-note">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 flex-shrink-0"
+                      viewBox="0 0 512 512">
+                      <path
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32"
+                        class="stroke-green-600"
+                        d="M416 128L192 384l-96-96" />
+                    </svg>
+                    <span class="text-base"
+                      >Submission successful. Thank you!</span
+                    >
+                    <button
+                      class="flex-shrink-0 ml-auto cursor-pointer close-note-btn">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5"
+                        viewBox="0 0 512 512">
+                        <path
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="32"
+                          class="stroke-green-600"
+                          d="M368 368L144 144M368 144L144 368" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
