@@ -58,6 +58,10 @@
     @apply pb-4 md:pb-0 h-max md:h-auto overflow-visible md:overflow-auto;
   }
 
+  .sticky-nav {
+    @apply !fixed !bg-slate-950 !py-4 !translate-y-0;
+  }
+
   button.active-tab {
     @apply after:w-full;
   }

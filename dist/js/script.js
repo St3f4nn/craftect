@@ -1,7 +1,7 @@
 "use strict";
 
 // ELEMENTS
-const header = document.querySelector("header");
+const header = document.querySelector(`header`);
 
 const toggleMenuBtn = document.querySelector("#toggle-menu-button");
 
@@ -239,3 +239,69 @@ notePopups.addEventListener("click", function (e) {
 requiredFields.forEach(field =>
   field.addEventListener("keyup", () => field.classList.remove("empty-field"))
 );
+
+// "smooth scrolling" effect
+document.querySelector("body").addEventListener("click", function (e) {
+  const link = e.target.closest("a");
+
+  if (
+    link &&
+    link.hasAttribute("href") &&
+    link.getAttribute("href").startsWith("#") &&
+    link.getAttribute("target") !== "_blank"
+  ) {
+    e.preventDefault();
+
+    header.classList.remove("active");
+
+    if (!link.getAttribute("href").endsWith("#"))
+      header.classList.add("sticky-nav");
+
+    window.scrollTo({
+      left: link.getAttribute("href").endsWith("#")
+        ? 0
+        : document
+            .querySelector(link.getAttribute("href"))
+            .getBoundingClientRect().left + window.scrollX,
+      top: link.getAttribute("href").endsWith("#")
+        ? 0
+        : document
+            .querySelector(link.getAttribute("href"))
+            .getBoundingClientRect().top +
+          window.scrollY -
+          header.getBoundingClientRect().height,
+      behavior: "smooth",
+    });
+  }
+});
+
+// Sticky navigation functionality
+const heroSectionObserver = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        header.classList.add("sticky-nav");
+      } else {
+        header.classList.remove("sticky-nav");
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${
+      header.getBoundingClientRect().height +
+      document.querySelector("#logos").getBoundingClientRect().height
+    }px`,
+  }
+);
+
+heroSectionObserver.observe(document.querySelector("#hero"));
+
+window.addEventListener("scroll", function () {
+  if (this.scrollY > header.getBoundingClientRect().height) {
+    header.classList.add("-translate-y-full");
+  } else {
+    header.classList.remove("-translate-y-full");
+  }
+});
