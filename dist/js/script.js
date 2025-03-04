@@ -305,3 +305,23 @@ window.addEventListener("scroll", function () {
     header.classList.remove("-translate-y-full");
   }
 });
+
+const sectionObserver = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("intersected");
+      } else {
+        entry.target.classList.remove("intersected");
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.2,
+  }
+);
+
+document
+  .querySelectorAll("section")
+  .forEach(section => sectionObserver.observe(section));

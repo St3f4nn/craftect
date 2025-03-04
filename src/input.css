@@ -88,6 +88,22 @@
     @apply block md:grid md:grid-cols-2;
   }
 
+  section#projects figure {
+    @apply md:opacity-0 transition-all duration-500;
+  }
+
+  section#projects figure:nth-child(3n + 1) {
+    @apply md:translate-y-10;
+  }
+
+  section#projects figure:nth-child(3n + 2) {
+    @apply md:translate-y-10 xl:translate-y-20;
+  }
+
+  section#projects figure:nth-child(3n + 3) {
+    @apply md:translate-y-10 xl:translate-y-32;
+  }
+
   .slide-dot {
     @apply w-2 h-2 bg-white opacity-75 rounded-full inline-block transition-all duration-200 cursor-pointer focus:outline-none;
   }
@@ -107,6 +123,26 @@
 
   .empty-field {
     @apply !border-b-2 !border-red-600 hover:!border-red-600;
+  }
+
+  div#about section.intersected > .container,
+  div#about
+    section.intersected:nth-child(1)
+    > .container
+    div:first-child
+    div:last-child
+    div,
+  div#about
+    section.intersected:nth-child(2)
+    > .container
+    div:first-child
+    div:first-child
+    div,
+  section#services.intersected .active-service,
+  section#projects.intersected figure,
+  section#reviews.intersected .container,
+  section#contact.intersected header + div {
+    @apply translate-y-0 opacity-100;
   }
 }
 
