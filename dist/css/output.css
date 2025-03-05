@@ -684,6 +684,16 @@ select[name="inquiries"]:focus + svg {
   border-color: rgb(220 38 38 / var(--tw-border-opacity)) !important;
 }
 
+.empty-field::-moz-placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(220 38 38 / var(--tw-text-opacity)) !important;
+}
+
+.empty-field::placeholder {
+  --tw-text-opacity: 1 !important;
+  color: rgb(220 38 38 / var(--tw-text-opacity)) !important;
+}
+
 .empty-field:hover {
   --tw-border-opacity: 1 !important;
   border-color: rgb(220 38 38 / var(--tw-border-opacity)) !important;

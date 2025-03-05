@@ -122,7 +122,7 @@
   }
 
   .empty-field {
-    @apply !border-b-2 !border-red-600 hover:!border-red-600;
+    @apply !border-b-2 !border-red-600 hover:!border-red-600 placeholder:!text-red-600;
   }
 
   div#about section.intersected > .container,
