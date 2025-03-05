@@ -240,6 +240,18 @@ requiredFields.forEach(field =>
   field.addEventListener("keyup", () => field.classList.remove("empty-field"))
 );
 
+document.querySelectorAll("input[type='number']").forEach(function (input) {
+  input.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && ["a", "c", "v", "x"].includes(e.key.toLowerCase())) return;
+
+    if (
+      !/^\d$/.test(e.key) &&
+      !["Backspace", "Tab", "ArrowLeft", "ArrowRight", "Delete"].includes(e.key)
+    )
+      e.preventDefault();
+  });
+});
+
 // "smooth scrolling" effect
 document.querySelector("body").addEventListener("click", function (e) {
   const link = e.target.closest("a");
